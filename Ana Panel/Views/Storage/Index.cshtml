@@ -1,0 +1,34 @@
+﻿@model List<Ana_Panel.Models.ProductViewModels.IndexProductViewModel>
+
+<h1>Depo Durumu</h1>
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>Barkod</th>
+			<th>Isim</th>
+			<th>Stok Adedi</th>
+			<th>Renk</th>
+			<th>Giris</th>
+			<th>Son Guncelleme</th>
+			<th>Istasyon</th>
+			<th> </th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var urun in Model)
+		{
+			<tr>
+				<td>@urun.Barcode</td>
+				<td>@urun.Name</td>
+				<td>@urun.Stock</td>
+				<td>@urun.Color</td>
+				<td>@urun.DateCreated.ToString()</td>
+				<td>@urun.DateUpdated.ToString()</td>
+				<td>@urun.StationName</td>
+				<td><a href = "Storage/View/@urun.ProductId">Goruntule</a></td>
+			</tr>
+		}
+	</tbody>
+</table>
+

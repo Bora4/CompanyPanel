@@ -1,0 +1,38 @@
+﻿@model Ana_Panel.Models.EmployeeViewModels.AddEmployeeViewModel
+
+<h1>Personel Ekle</h1>
+
+<form method="post" action="Add" class="mt-5">
+    <div class="mb-3">
+        <label for="" class="form-label">Isim</label>
+        <input type="text" class="form-control" asp-for="Name">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Email Adresi</label>
+        <input type="email" class="form-control" asp-for="Email">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Maas</label>
+        <input type="number" class="form-control" asp-for="Salary">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Dogum Tarihi</label>
+        <input type="date" class="form-control" asp-for="DateOfBirth">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Departman</label>
+        <select class="form-select" aria-label="Default select example" asp-for="Department">
+            <option selected>Departman Seciniz</option>
+            <option value="Atolye">Atolye</option>
+            <option value="IK">IK</option>
+            <option value="IT">IT</option>
+            <option value="Yonetim">Yonetim</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Unvan</label>
+        <input type="text" class="form-control" asp-for="Title">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Yeni Personel Yarat</button>
+</form>

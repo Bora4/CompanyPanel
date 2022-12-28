@@ -1,0 +1,51 @@
+﻿@model Ana_Panel.Models.ProductViewModels.UpdateProductViewModel
+
+
+<h1>Urun Duzenle</h1>
+
+<form method="post" action="View" class="mt-5">
+    <div class="invisible">
+        <input type="text" asp-for="ProductId" readonly>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Barkod</label>
+        <input type="number" class="form-control" asp-for="Barcode">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Isim</label>
+        <input type="text" class="form-control" asp-for="Name">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Stok</label>
+        <input type="text" class="form-control" asp-for="Stock">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Renk</label>
+        <input type="text" class="form-control" asp-for="Color">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Giris</label>
+        <input type="datetime=dd/mm/yyyy hh:mm:ss" class="form-control" asp-for="DateCreated">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Istasyon</label>
+        <select class="form-select" aria-label="Default select example" asp-for="StationId">
+            <option selected>Istasyon Seciniz</option>
+            <option value="1">Ana Depo</option>
+            <option value="2">Almanya Depo</option>
+            <option value="3">Bulgaristan Depo</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Hedef</label>
+        <select class="form-select" aria-label="Default select example" asp-for="DestinationId">
+            <option selected>Istasyon Seciniz</option>
+            <option value="1">Ana Depo</option>
+            <option value="2">Almanya Depo</option>
+            <option value="3">Bulgaristan Depo</option>
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Guncelle</button>
+    <button type="submit" class="btn btn-danger" asp-action="Delete" asp-controller="Storage">Sil</button>
+</form>

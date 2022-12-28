@@ -1,0 +1,33 @@
+﻿@model Ana_Panel.Models.ProductViewModels.AddProductViewModel
+
+<h1>Urun Ekle</h1>
+
+<form method="post" action="Add" class="mt-5">
+    <div class="mb-3">
+        <label for="" class="form-label">Barkod</label>
+        <input type="text" class="form-control" asp-for="Barcode">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Isim</label>
+        <input type="text" class="form-control" asp-for="Name">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Stok</label>
+        <input type="text" class="form-control" asp-for="Stock">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Renk</label>
+        <input type="text" class="form-control" asp-for="Color">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Istasyon</label>
+        <select class="form-select" aria-label="Default select example" asp-for="StationId">
+            <option selected>Istasyon Seciniz</option>
+            <option value="1">Ana Depo</option>
+            <option value="2">Almanya Depo</option>
+            <option value="3">Bulgaristan Depo</option>
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Urun Ekle</button>
+</form>
